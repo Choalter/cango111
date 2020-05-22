@@ -1,0 +1,73 @@
+{% load static %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> TOGETHER </title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    <title>TOGETHER</title>
+    <style type ="text/css">
+    div#side_left{
+      width:20%;
+      height:80%;
+      background-color:grey;
+      border: 3px solid black;
+      float:left;
+      margin:5px;
+      cursor: pointer;
+      }
+
+      #side_left_index{
+        display: inline;
+        background-color:white;
+        margin-top:5%;
+        font-size: 30px;
+      }
+
+      #mid_content{
+      width:60%;
+      height:80%;
+      background-color:black;
+      border: 3px solid grey;
+      float:left;
+      margin:5px;
+      cursor: pointer;
+      }
+      #mid_index{
+        display: inline;
+        background-color:white;
+        margin-top:5%;
+        font-size: 30px;
+      }
+      </style>
+
+  </head>
+
+  <body>
+  <nav>
+  <a class="home" href="/home/"><h1>TOGETHER</h1></a>
+  <a class="study" href="/for_study/"><h1>스터디 모집</h1></a>
+  <a class="together" href="/together_study/"><h1>함께 공부해요</h1></a>
+</nav>
+    <div style = "border:1 px black; floatL left; width:33%"> <h2><a href="">TOGETHER</a></h2></div>
+    <div>
+    {% for post in posts %}
+   <h2> <a href = "">{{post.title}}</a></h2>
+    {% endfor %}
+    </div>
+    <div id = 'side_left'>
+      <div id = 'side_left_index', onclick ="location.href='';" >Options</div>
+
+    </div>
+    <div id = 'mid_content'>
+      <div id = 'mid_index', onclick ="location.href='';" >Contents</div>
+    </div>
+
+
+ </body>
+
+</html>

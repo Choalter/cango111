@@ -1,0 +1,71 @@
+{% load static %}
+
+<html>
+  <head>
+    <title> TOGETHER </title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/website.css' %}">
+    <title> Contents </title>
+    <style type ="text/css">
+    div#side_left{
+      width:20%;
+      height:80%;
+      background-color:grey;
+      border: 3px solid black;
+      float:left;
+      margin:5px;
+      cursor: pointer;
+      }
+
+      #side_left_index{
+        display: inline;
+        background-color:white;
+        margin-top:5%;
+        font-size: 30px;
+      }
+
+      #mid_content{
+      width:60%;
+      height:80%;
+      background-color:black;
+      border: 3px solid grey;
+      float:left;
+      margin:5px;
+      cursor: pointer;
+      }
+      #mid_index{
+        display: inline;
+        background-color:white;
+        margin-top:5%;
+        font-size: 30px;
+      }
+      </style>
+  </head>
+
+  <body>
+  <div style = "border:1 px black; floatL left; width:33%"> <h2><a href="">TOGETHER</a></h2></div>
+  <div>
+    {% for post in posts %}
+   <h2> <a href = "">{{post.title}}</a></h2>
+    {% endfor %}
+    </div>
+
+  <div id = 'side_left'>
+      <div id = 'sife_left_index'>Options</div>
+      <li>
+        <a href="">Calculus</a>
+      </li>
+      <li>
+        <a href="">Programming</a>
+      </li>
+  </div>
+
+  <div id= 'mid_content'>
+    {%for content in contents%}
+    <li><a href="">{{content.title}}</a></li>
+    {%endfor%}
+  </div>
+  </body>
+
+</html>
